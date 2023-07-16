@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <!-- Base Define -->
+    <definition name="base.definition" template="/views/templates/user/template_u1.jsp">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="header" value="/views/templates/user/header.jsp"/>
+        <put-attribute name="menu" value="/views/templates/user/navigation.jsp"/>
+        <put-attribute name="aside" value=""/>
+        <put-attribute name="body" value=""/>
+        <put-attribute name="footer" value="/views/templates/user/footer.jsp"/>
+    </definition>
+
+    <!-- Base Define admin -->
+    <definition name="base.definition.admin" template="/views/templates/admin/template_a1.jsp">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="menu" value="/views/templates/admin/navigationAdmin.jsp"/>
+        <put-attribute name="aside" value=""/>
+        <put-attribute name="body" value=""/>
+    </definition>
+
+    <definition name="homePage" extends="base.definition">
+        <put-attribute name="title" value="Home Page"/>
+        <put-attribute name="body" value="/views/index.jsp"/>
+        <put-attribute name="menu" value="/views/templates/user/navigation.jsp"/>
+    </definition>
+    <definition name="homePageDN" extends="base.definition">
+        <put-attribute name="title" value="Home Page"/>
+        <put-attribute name="body" value="/views/index.jsp"/>
+        <put-attribute name="menu" value="/views/templates/user/navigationDN.jsp"/>
+    </definition>
+    <definition name="product_list_user" extends="base.definition">
+        <put-attribute name="title" value="Product page"/>
+        <put-attribute name="body" value="/views/product/list.jsp"/>
+        <put-attribute name="aside" value=""/>
+    </definition>
+    <definition name="product_list_userDN" extends="base.definition">
+        <put-attribute name="menu" value="/views/templates/user/navigationDN.jsp"/>
+        <put-attribute name="title" value="Product page"/>
+        <put-attribute name="body" value="/views/product/listDN.jsp"/>
+        <put-attribute name="aside" value=""/>
+    </definition>
+    <definition name="buy_list_user" extends="base.definition">
+        <put-attribute name="title" value="Product page"/>
+        <put-attribute name="body" value="/views/product/list.jsp"/>
+        <put-attribute name="aside" value="/views/templates/user/aside.jsp"/>
+    </definition>
+    <definition name="cart_list_user" extends="base.definition">
+        <put-attribute name="title" value="Product page"/>
+        <put-attribute name="body" value="/views/indexGHindex.jsp.jsp"/>
+        <put-attribute name="aside" value=""/>
+    </definition>
+    <definition name="product_list_detailDN" extends="base.definition">
+        <put-attribute name="title" value="Detail Product page"/>
+        <put-attribute name="menu" value="/views/templates/user/navigationDN.jsp"/>
+        <put-attribute name="body" value="/views/product/detail.jsp"/>
+        <put-attribute name="aside" value=""/>
+    </definition>
+    <definition name="product_list_detail" extends="base.definition">
+        <put-attribute name="title" value="Detail Product page"/>
+        <put-attribute name="body" value="/views/product/detail.jsp"/>
+        <put-attribute name="aside" value=""/>
+    </definition>
+
+    <!-- admin dashboard -->
+    <definition name="dashboard" extends="base.definition.admin">
+        <put-attribute name="title" value="Dashboard Page"/>
+        <put-attribute name="body" value="/views/admin/dashboard.jsp"/>
+    </definition>
+    <definition name="category_admin" extends="base.definition.admin">
+        <put-attribute name="title" value="Category Admin"/>
+        <put-attribute name="body" value="/views/category/index.jsp"/>
+    </definition>
+    <definition name="product_admin" extends="base.definition.admin">
+        <put-attribute name="title" value="Product Admin"/>
+        <put-attribute name="body" value="/views/product/index.jsp"/>
+    </definition>
+    <definition name="khachHang_admin" extends="base.definition.admin">
+        <put-attribute name="title" value="Khach Hang Admin"/>
+        <put-attribute name="body" value="/views/KhachHang/index.jsp"/>
+    </definition>
+
+</tiles-definitions>
